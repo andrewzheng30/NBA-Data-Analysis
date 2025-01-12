@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Interactive NBA Data Analysis</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Interactive NBA Data Analysis</h1>
+
+    <!-- Regular vs Playoffs Difference -->
+    <div>
+        <h2>Regular vs Playoffs Difference</h2>
+        <div id="plot-regular-playoffs"></div>
+        <script>
+            var data1 = [
+                {
+                    x: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+                    y: [10, 12, 14, 11, 13, 15, 12, 14, 16],
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    name: 'Difference',
+                    line: {color: 'purple'}
+                }
+            ];
+
+            var layout1 = {
+                title: 'Regular vs Playoffs: Difference Over the Years',
+                xaxis: { title: 'Year' },
+                yaxis: { title: 'Difference in Points' }
+            };
+
+            Plotly.newPlot('plot-regular-playoffs', data1, layout1);
+        </script>
+    </div>
+
+    <!-- Stats Per 100 Possessions -->
+    <div>
+        <h2>Stats Per 100 Possessions</h2>
+        <div id="plot-per-100"></div>
+        <script>
+            var data2 = [
+                {
+                    x: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+                    y: [110, 112, 114, 116, 115, 117, 119, 120, 122],
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    name: 'Regular Season',
+                    line: {color: 'blue'}
+                },
+                {
+                    x: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+                    y: [100, 102, 104, 106, 105, 107, 108, 110, 111],
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    name: 'Playoffs',
+                    line: {color: 'orange'}
+                }
+            ];
+
+            var layout2 = {
+                title: 'Stats Per 100 Possessions',
+                xaxis: { title: 'Year' },
+                yaxis: { title: 'Points Per 100 Possessions' }
+            };
+
+            Plotly.newPlot('plot-per-100', data2, layout2);
+        </script>
+    </div>
+
+    <!-- Stats Per 48 Minutes -->
+    <div>
+        <h2>Stats Per 48 Minutes</h2>
+        <div id="plot-per-48"></div>
+        <script>
+            var data3 = [
+                {
+                    x: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+                    y: [28, 30, 32, 31, 33, 34, 36, 38, 39],
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    name: 'Regular Season',
+                    line: {color: 'green'}
+                },
+                {
+                    x: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+                    y: [24, 26, 28, 27, 29, 30, 32, 34, 35],
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    name: 'Playoffs',
+                    line: {color: 'red'}
+                }
+            ];
+
+            var layout3 = {
+                title: 'Stats Per 48 Minutes',
+                xaxis: { title: 'Year' },
+                yaxis: { title: 'Points Per 48 Minutes' }
+            };
+
+            Plotly.newPlot('plot-per-48', data3, layout3);
+        </script>
+    </div>
+
+    <!-- Points Distribution: Regular Season vs Playoffs -->
+    <div>
+        <h2>Points Distribution: Regular Season vs Playoffs</h2>
+        <div id="plot-distribution"></div>
+        <script>
+            var data4 = [
+                {
+                    x: [5, 10, 15, 20, 25, 30, 35],
+                    y: [12, 15, 18, 20, 22, 25, 28],
+                    type: 'bar',
+                    name: 'Regular Season',
+                    marker: {color: 'blue'}
+                },
+                {
+                    x: [5, 10, 15, 20, 25, 30, 35],
+                    y: [8, 12, 16, 18, 20, 22, 24],
+                    type: 'bar',
+                    name: 'Playoffs',
+                    marker: {color: 'red'}
+                }
+            ];
+
+            var layout4 = {
+                title: 'Points Distribution',
+                barmode: 'group',
+                xaxis: { title: 'Points' },
+                yaxis: { title: 'Frequency' }
+            };
+
+            Plotly.newPlot('plot-distribution', data4, layout4);
+        </script>
+    </div>
+</body>
+</html>
