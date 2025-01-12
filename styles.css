@@ -1,0 +1,78 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #1d428a; /* NBA Blue */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 4px solid #c8102e; /* NBA Red */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Styling */
+section {
+    margin: 30px 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #1d428a;
+}
+
+section p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Image Styling */
+section img {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1d428a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
